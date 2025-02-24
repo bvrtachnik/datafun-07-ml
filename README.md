@@ -1,52 +1,38 @@
-# Specification for Project 5 SQL Module
+# Project Setup
 
-## Step 1: Start Project, Open in VS Code
+## Project Initialization
 
-Start a project as usual. 
-1. Create a repo in GitHub with a default README.md. Name the repo **datafun-07-ml**. 
-2. Clone your new repo down to the Projects folder on your machine. 
-3. Open your new project repository folder in VS Code.
+### Create a GitHub Repository
+Create a new repo on GitHub and add a default README.
 
----
+### Clone the Repository
+~~~shell
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
+~~~
 
-## Step 2: Add/Update Critical Files
+### Add .gitignore and requirements.txt
+- Right-click the project folder and create .gitignore and requirements.txt.
+- Add necessary dependencies to requirements.txt.
+  
+### Create and Activate a Virtual Environment
+~~~shell
+python -m venv .venv
+.\.venv\Scripts\Activate
+~~~
 
-With your new project repo folder open in VS Code, add/update critical project files at the start of every project. 
+### Upgrade Pip, Setuptools, and Wheel
+~~~shell
+py -m pip install --upgrade pip setuptools wheel
+~~~
 
-### Add/Add .gitignore
+### Install Dependencies
+~~~shell
+pip install -r requirements.txt
+~~~
 
-- The .gitignore file tells Git files to ignore when committing changes.
-- Review/copy the example .gitignore file, you might be able to use it without modification.
-
-### Add/Update requirements.txt
-
-- The requirements.txt file lists the packages used in the project.
-- Review/copy the example requirements.txt file, you might be able to use it without modification.
-- You may not need all the listed packages - and may want to add others. Modify the requirements.txt as needed.
-
-### Update README.md
-
-- Edit and customize your README.md to provide an overview of the project and instructions for running it.
- 
-### Git add-commit-push
-
-After adding .gitignore (or any other key file), run git add, commit, and push to commit your changes to GitHub. 
-
-```shell
+### Use Git to Add, Commit, and Push Files
+~~~shell
 git add .
-git commit -m "Add .gitignore and requirements.txt"
-git push -u origin main
-```
-
----
-
-## Step 3: Set up Virtual Environment
-
-Next, create and activate a virtual environment for this project. 
-Also install additional dependencies required for this project.
-See [requirements.txt](requirements.txt) for detailed instructions. 
-
-A. Create .venv
-B. Activate .venv
-C. Install dependencies into .venv
-D. Select VS Code interpreter to use .venv
+git commit -m "Initial commit"
+git push origin main
